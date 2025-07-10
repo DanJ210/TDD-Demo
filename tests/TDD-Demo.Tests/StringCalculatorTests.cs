@@ -31,7 +31,8 @@ public class StringCalculatorTests
         // Assert
         Assert.Equal(expected, result);
     }
-
+    /*
+    // 🟢 GREEN PHASE: Implement the functionality to make this test pass
     // TODO: Uncomment tests one by one as you implement features
     // Follow the TDD cycle: Red -> Green -> Refactor
 
@@ -89,7 +90,7 @@ public class StringCalculatorTests
         // Assert
         Assert.Equal(expected, result);
     }
-    /*
+    
 
     [Fact]
     public void Add_CustomDelimiter_ReturnsSum()
