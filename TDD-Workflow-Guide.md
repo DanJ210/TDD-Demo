@@ -129,7 +129,7 @@ Repeat this process for each test:
    - Detroit School focuses on implementation details, while London School emphasizes behavior and collaboration
    - London School encourages the use of mocks and stubs to isolate units, while Detroit School prefers real implementations until necessary
 
--- **We Use Both**
+-- **We Use Both as a Hybrid**
 ## TDD Best Practices
 - **Red-Green-Refactor Cycle**: Always follow the cycle for each test
 - **Arrange-Act-Assert Pattern**: Structure tests clearly
@@ -141,11 +141,12 @@ Repeat this process for each test:
 
 ### Key TDD Principles:
 
-1. **Baby Steps**: Each test should require minimal code changes
-2. **Fail First**: Always see the test fail before making it pass
-3. **Simplest Solution**: Don't over-engineer; write just enough code
-4. **Refactor Safely**: Only refactor when all tests are green
-5. **One Thing at a Time**: Focus on one failing test
+1. **Test Names Matter**: Use descriptive names that explain the behavior - often drives the implementation
+2. **Baby Steps**: Start Simple, each test should require minimal code changes
+3. **Fail First**: Always see the test fail before making it pass
+4. **Simplest Solution**: Don't over-engineer; write just enough code
+5. **Refactor Safely**: Only refactor when all tests are green
+6. **One Thing at a Time**: Focus on one failing test
 
 ### Common Mistakes to Avoid:
 
@@ -165,40 +166,65 @@ Repeat this process for each test:
 
 ---
 
-## 🚀 Team Exercise Ideas
+## 📊 TDD in Agile Software Development
 
-### Exercise 1: Complete the String Calculator
-- Work in pairs
-- Take turns being "driver" and "navigator"
-- Follow the exact TDD cycle for each test
-- Discuss refactoring opportunities
+### TDD's Role in Agile Methodology
 
-### Exercise 2: Add Your Own Requirements
-- Add new test cases to the TestList.md
-- Implement them using TDD
-- Examples:
-  - Support for decimal numbers
-  - Different number formats (hex, binary)
-  - Mathematical operations beyond addition
+TDD naturally aligns with Agile principles and enhances team collaboration:
 
-### Exercise 3: Code Review TDD Style
-- Review each other's implementations
-- Focus on test quality and coverage
-- Discuss alternative implementations
+**Sprint Planning & User Stories**
+- Break user stories into testable behaviors
+- Use acceptance criteria to guide test creation
+- Estimate complexity based on test scenarios
 
----
+**Daily Standups**
+- Discuss failing tests as blockers
+- Share test progress as completion metrics
+- Identify integration challenges early
 
-## 📊 Tracking Progress
+**Sprint Reviews & Retrospectives**
+- Demonstrate features through passing tests
+- Review test coverage and quality metrics
+- Discuss TDD adoption challenges and successes
 
-Update your TestList.md as you complete each test:
+### Continuous Integration Benefits
 
-```markdown
-### ✅ Completed Tests
-- [x] Empty string returns 0
-- [x] Single number returns that number
-- [ ] Two comma-separated numbers return their sum
-- [ ] Multiple comma-separated numbers return their sum
-...
-```
+**Automated Testing Pipeline**
+- Every commit triggers full test suite
+- Fast feedback on code changes
+- Prevents regression issues in shared codebase
 
-This visual progress helps the team stay focused and celebrates small wins!
+**Code Quality Gates**
+- Require minimum test coverage thresholds
+- Block merges with failing tests
+- Maintain consistent coding standards
+
+### Team Collaboration Advantages
+
+**Shared Understanding**
+- Tests document expected behavior
+- Clear definition of "done" for features
+- Reduces miscommunication between team members
+
+**Pair Programming Enhancement**
+- Driver writes test, navigator suggests implementation
+- Natural discussion points during red-green-refactor
+- Knowledge sharing through test design
+
+**Code Reviews Focus**
+- Review test quality alongside implementation
+- Verify test scenarios cover acceptance criteria
+- Ensure tests are maintainable and readable
+
+### Measuring TDD Success
+
+**Key Metrics to Track**
+- Test coverage percentage (aim for 80%+ on core logic)
+- Test execution time (keep feedback loop fast)
+- Defect escape rate (bugs found in production)
+- Code complexity metrics (cyclomatic complexity)
+
+**Team Velocity Indicators**
+- Faster feature delivery after initial TDD adoption
+- Reduced debugging and bug-fix time
+- Increased confidence in refactoring and changes
