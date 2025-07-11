@@ -110,6 +110,35 @@ Repeat this process for each test:
 
 ## 🎓 Learning Points for Your Team
 
+## Two Schools
+ 1. Detroit School - Oldest (AKA. Classic)
+    - Tend to write test verifictions first (action)
+    - Then observe state or impact of action
+    - Avoid test doubles until dependencies forces it (otherwise classical favors real implementation)
+ 2. London School (AKA Mockist "Mocking school")
+    - Emphasizes collaboration and communication
+    - Focuses on testing behavior rather than implementation
+    - Encourages the use of test doubles (mocks, stubs) to isolate units of work
+    - Starts with acceptance tests and breaks them down into smaller unit tests
+    - What is an acceptance test?
+      - A test that verifies the system meets business requirements
+      - Often written in collaboration with stakeholders
+      - Focuses on user stories and high-level functionality
+
+-- **Key Differences**
+   - Detroit School focuses on implementation details, while London School emphasizes behavior and collaboration
+   - London School encourages the use of mocks and stubs to isolate units, while Detroit School prefers real implementations until necessary
+
+-- **We Use Both**
+## TDD Best Practices
+- **Red-Green-Refactor Cycle**: Always follow the cycle for each test
+- **Arrange-Act-Assert Pattern**: Structure tests clearly
+- **Single Responsibility**: Each test should focus on one behavior
+- **Descriptive Test Names**: Use names that clearly describe the behavior being tested
+- **Mock Dependencies**: Use Moq to isolate units under test
+- **Test Edge Cases**: Include tests for boundary conditions and error scenarios
+- **Verify Interactions**: Use Moq.Verify to ensure dependencies are called correctly
+
 ### Key TDD Principles:
 
 1. **Baby Steps**: Each test should require minimal code changes
